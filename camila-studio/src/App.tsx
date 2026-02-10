@@ -1,14 +1,13 @@
 import './styles/App.css'
-
+import Header from './sections/layout/Header';
 function App() {
 
 
   return (
     <>
 
-      <p >
-        hola mundo
-      </p>
+      <Header />
+
     </>
   )
 }
