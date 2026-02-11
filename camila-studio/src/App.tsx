@@ -1,5 +1,5 @@
 import './styles/App.css'
-import Header from './sections/layout/Header';
+import Header from './sections/layout/Header.tsx';
 function App() {
 
 
