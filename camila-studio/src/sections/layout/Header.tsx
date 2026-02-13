@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LogoLetras from "../../assets/LogoLetras.png";
+import LogoLetras from "../../assets/LogoLetras2.png";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +47,11 @@ function Header() {
                         <li key={item.id}>
                             <button
                                 onClick={() => smoothScroll(item.id)}
-                                className="text-sm font-semibold text-blue-900 hover:text-blue-700 transition-colors duration-300 relative group"
+                                className="text-sm font-semibold text-blue-900 hover:text-blue-800 transition-colors duration-300 relative group"
                             >
                                 {item.name}
                                 {/* Línea decorativa al hacer hover */}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full"></span>
                             </button>
                         </li>
                     ))}
