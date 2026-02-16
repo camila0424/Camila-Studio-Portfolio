@@ -1,14 +1,13 @@
 import './styles/App.css'
-import Header from './sections/layout/Header.tsx';
-import Hero from './sections/landing/Hero.tsx';
+import Header from './layout/Header.tsx';
+import Home from './pages/Home.tsx';
 function App() {
 
 
   return (
     <>
-
       <Header />
-      <Hero />
+      <Home />
 
     </>
   )

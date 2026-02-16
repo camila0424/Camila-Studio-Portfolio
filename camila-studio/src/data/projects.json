@@ -1,0 +1,126 @@
+[
+  {
+    "title": "IBL SA – International Business Logistic S.A.",
+    "desc": "Web corporativa de IBLSA, empresa de transporte internacional en Panamá, desarrollada con apoyo de IA. Incluye diseño de prototipos en Figma y despliegue en Hostinger, con enfoque en diseño responsive y experiencia de usuario, gestionando todo el proceso desde la conceptualización hasta su publicación en producción.",
+    "image": "/icons/projects/iblsa.png",
+    "techIcons": [
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "Hostinger", "icon": "/icons/tech/hostinger.svg" },
+      { "name": "IA", "icon": "/icons/tech/ai.svg" },
+      { "name": "HTML", "icon": "/icons/tech/html.svg" },
+      { "name": "CSS", "icon": "/icons/tech/css.svg" }
+    ],
+    "github": "",
+    "demo": "https://iblsa.com/"
+  },
+  {
+    "title": "International Business Logistics",
+    "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real. Implementé la lógica del juego con control de estado, diseño responsive y despliegue en Vercel. Este proyecto refuerza el uso de componentes reutilizables y hooks en un entorno dinámico.",
+    "image": "/icons/projects/piedra_papel_tijera.png",
+    "techIcons": [
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
+      { "name": "TailwindCSS", "icon": "/icons/tech/tailwindcss.svg" },
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
+    ],
+    "github": "https://github.com/camila0424/juega-piedra-papel-o-tijera.git",
+    "demo": "https://juega-piedra-papel-o-tijera.vercel.app/"
+  },
+  {
+    "title": "Juega Piedra-Papel-Tijera",
+    "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real. Implementé la lógica del juego con control de estado, diseño responsive y despliegue en Vercel. Este proyecto refuerza el uso de componentes reutilizables y hooks en un entorno dinámico.",
+    "image": "/icons/projects/piedra_papel_tijera.png",
+    "techIcons": [
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
+      { "name": "TailwindCSS", "icon": "/icons/tech/tailwindcss.svg" },
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
+    ],
+    "github": "https://github.com/camila0424/juega-piedra-papel-o-tijera.git",
+    "demo": "https://juega-piedra-papel-o-tijera.vercel.app/"
+  },
+  {
+    "title": "Mila Music",
+    "desc": "Plataforma web en desarrollo para conectar estudiantes con docentes de música alrededor del mundo. Construida en React con TypeScript, Vite y TailwindCSS, cuenta con diseño en Figma y despliegue en Vercel. Incluye sistema de búsqueda y filtrado de profesores, con proyección a integrar login y gestión de perfiles.",
+    "image": "/icons/projects/mila.png",
+    "techIcons": [
+      { "name": "TypeScript", "icon": "/icons/tech/typescript.svg" },
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
+      { "name": "TailwindCSS", "icon": "/icons/tech/tailwindcss.svg" },
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
+    ],
+    "github": "https://github.com/camila0424/Mila_Music_2.0.git",
+    "demo": "https://mila-music-2-0.vercel.app/"
+  },
+  {
+    "title": "Meal App",
+    "desc": "Aplicación móvil desarrollada en React Native y Expo para consultar recetas, ver pasos de preparación y filtrar por categorías de alimentos. Implementé navegación, gestión de estados y optimización para móviles. Este proyecto fortaleció mis habilidades en desarrollo multiplataforma.",
+    "image": "/icons/projects/recetas.png",
+    "techIcons": [
+      { "name": "React Native", "icon": "/icons/tech/react.svg" },
+      { "name": "Expo", "icon": "/icons/tech/expo.svg" },
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" }
+    ],
+    "github": "https://github.com/camila0424/meal-app-react-native.git",
+    "demo": null
+  },
+  {
+    "title": "Listado de usuarios",
+    "desc": "Aplicación práctica en React que permite crear, listar, buscar y añadir usuarios a favoritos, con persistencia en localStorage. Incluye gestión de estado y manejo de eventos, consolidando bases de CRUD en frontend.",
+    "image": "/icons/projects/listado.png",
+    "techIcons": [
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
+      { "name": "Css", "icon": "/icons/tech/css.svg" },
+      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" }
+    ],
+    "github": "https://github.com/camila0424/listado_de_contactos.git",
+    "demo": "https://camila0424.github.io/listado_de_contactos/"
+  },
+  {
+    "title": "Harry Potter Finder",
+    "desc": "Aplicación web en React que consume una API de personajes de Harry Potter. Permite buscarlos, filtrarlos por casa y ver detalles individuales. Backend desarrollado con Node.js y Express, mostrando integración full-stack.",
+    "image": "/icons/projects/harry.png",
+    "techIcons": [
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "NodeJs", "icon": "/icons/tech/nodejs.svg" },
+      { "name": "ExpressJs", "icon": "/icons/tech/express.svg" },
+      { "name": "Html", "icon": "/icons/tech/html5.svg" },
+      { "name": "Css", "icon": "/icons/tech/css.svg" }
+    ],
+    "github": "https://github.com/camila0424/harry-potter-actors.git",
+    "demo": "http://beta.adalab.es/modulo-3-evaluacion-final-camila0424/"
+  },
+  {
+    "title": "The Simpsons Backend",
+    "desc": "API REST desarrollada con Node.js, Express y MySQL para gestionar frases de Los Simpsons, incluyendo personaje, episodio y temporada. Documentada en Postman y con modelo de base de datos diseñado en MySQL Workbench. Proyecto orientado a backend real para consumo desde aplicaciones frontend.",
+    "image": "/icons/projects/simpsons.png",
+    "techIcons": [
+      { "name": "React", "icon": "/icons/tech/react.svg" },
+      { "name": "NodeJs", "icon": "/icons/tech/nodejs.svg" },
+      { "name": "ExpressJs", "icon": "/icons/tech/express.svg" },
+      { "name": "MySql", "icon": "/icons/tech/mysql.svg" },
+      { "name": "Postman", "icon": "/icons/tech/postman.svg" }
+    ],
+    "github": "https://github.com/camila0424/the-simpsons-backend.git",
+    "demo": null
+  },
+  {
+    "title": "Adacurri (Proyecto grupal)",
+    "desc": "Aplicación web colaborativa que permite crear y compartir una tarjeta con información de curriculum vitae. Desarrollada en equipo utilizando HTML, Sass, JavaScript y Vite. Incluye diseño personalizado en Photoshop y despliegue en GitHub Pages. Refuerza habilidades de trabajo en equipo y control de versiones.",
+    "image": "/icons/projects/adacurri.png",
+    "techIcons": [
+      { "name": "Html", "icon": "/icons/tech/html5.svg" },
+      { "name": "Sass", "icon": "/icons/tech/sass.svg" },
+      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
+      { "name": "PhotoShop", "icon": "/icons/tech/photoshop.svg" }
+    ],
+    "github": "https://github.com/camila0424/create-your-cv-card-.git",
+    "demo": "https://camila0424.github.io/create-your-cv-card-/index.html"
+  }
+]
