@@ -6,30 +6,15 @@
     "techIcons": [
       { "name": "Figma", "icon": "/icons/tech/figma.svg" },
       { "name": "Hostinger", "icon": "/icons/tech/hostinger.svg" },
-      { "name": "IA", "icon": "/icons/tech/ai.svg" },
-      { "name": "HTML", "icon": "/icons/tech/html.svg" },
+      { "name": "HTML", "icon": "/icons/tech/html5.svg" },
       { "name": "CSS", "icon": "/icons/tech/css.svg" }
     ],
     "github": "",
     "demo": "https://iblsa.com/"
   },
   {
-    "title": "International Business Logistics",
-    "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real. Implementé la lógica del juego con control de estado, diseño responsive y despliegue en Vercel. Este proyecto refuerza el uso de componentes reutilizables y hooks en un entorno dinámico.",
-    "image": "/icons/projects/piedra_papel_tijera.png",
-    "techIcons": [
-      { "name": "React", "icon": "/icons/tech/react.svg" },
-      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
-      { "name": "TailwindCSS", "icon": "/icons/tech/tailwindcss.svg" },
-      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
-      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
-    ],
-    "github": "https://github.com/camila0424/juega-piedra-papel-o-tijera.git",
-    "demo": "https://juega-piedra-papel-o-tijera.vercel.app/"
-  },
-  {
     "title": "Juega Piedra-Papel-Tijera",
-    "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real. Implementé la lógica del juego con control de estado, diseño responsive y despliegue en Vercel. Este proyecto refuerza el uso de componentes reutilizables y hooks en un entorno dinámico.",
+    "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real.",
     "image": "/icons/projects/piedra_papel_tijera.png",
     "techIcons": [
       { "name": "React", "icon": "/icons/tech/react.svg" },
@@ -43,7 +28,7 @@
   },
   {
     "title": "Mila Music",
-    "desc": "Plataforma web en desarrollo para conectar estudiantes con docentes de música alrededor del mundo. Construida en React con TypeScript, Vite y TailwindCSS, cuenta con diseño en Figma y despliegue en Vercel. Incluye sistema de búsqueda y filtrado de profesores, con proyección a integrar login y gestión de perfiles.",
+    "desc": "Plataforma web en desarrollo para conectar estudiantes con docentes de música alrededor del mundo.",
     "image": "/icons/projects/mila.png",
     "techIcons": [
       { "name": "TypeScript", "icon": "/icons/tech/typescript.svg" },
@@ -58,7 +43,7 @@
   },
   {
     "title": "Meal App",
-    "desc": "Aplicación móvil desarrollada en React Native y Expo para consultar recetas, ver pasos de preparación y filtrar por categorías de alimentos. Implementé navegación, gestión de estados y optimización para móviles. Este proyecto fortaleció mis habilidades en desarrollo multiplataforma.",
+    "desc": "Aplicación móvil desarrollada en React Native y Expo.",
     "image": "/icons/projects/recetas.png",
     "techIcons": [
       { "name": "React Native", "icon": "/icons/tech/react.svg" },
