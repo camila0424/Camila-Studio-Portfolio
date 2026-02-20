@@ -43,7 +43,7 @@
   },
   {
     "title": "Meal App",
-    "desc": "Aplicación móvil desarrollada en React Native y Expo.",
+    "desc": "Recipe Explorer es una aplicación que consume la API pública de TheMealDB para mostrar recetas de diferentes categorías. Permite filtrar las recetas, navegar a detalle de cada una y visualizar un contador de visitas por receta. La aplicación está desarrollada con React Native y funciona tanto en móviles (iOS/Android) como en web, con diseño responsive y optimizado para distintas resoluciones. Listado dinámico de recetas con imágenes, nombre, región y breve descripción.",
     "image": "/icons/projects/recetas.png",
     "techIcons": [
       { "name": "React Native", "icon": "/icons/tech/react.svg" },
@@ -55,7 +55,7 @@
   },
   {
     "title": "Listado de usuarios",
-    "desc": "Aplicación práctica en React que permite crear, listar, buscar y añadir usuarios a favoritos, con persistencia en localStorage. Incluye gestión de estado y manejo de eventos, consolidando bases de CRUD en frontend.",
+    "desc": "Listado de usuarios es una aplicación web interactiva que permite gestionar usuarios con funcionalidades avanzadas como búsqueda, filtrado y marcado de favoritos. La aplicación incluye persistencia de datos y capacidad para agregar nuevos usuarios. El proyecto está construido con React y estilos en SCSS, pensado para ofrecer una experiencia de usuario fluida y responsiva en dispositivos móviles y escritorio.",
     "image": "/icons/projects/listado.png",
     "techIcons": [
       { "name": "React", "icon": "/icons/tech/react.svg" },
@@ -68,7 +68,7 @@
   },
   {
     "title": "Harry Potter Finder",
-    "desc": "Aplicación web en React que consume una API de personajes de Harry Potter. Permite buscarlos, filtrarlos por casa y ver detalles individuales. Backend desarrollado con Node.js y Express, mostrando integración full-stack.",
+    "desc": "Es un buscador básico para encontrar los diferentes personajes de la saga de películas Harry Potter, filtrarlos usando el respectivo nombre y también seleccionando la casa a la que pertenece cada uno de ellos. En este buscador se puede ver la tarjeta descriptiva, seleccionando la imagen o el recuadro en el que se encuentra el actor.",
     "image": "/icons/projects/harry.png",
     "techIcons": [
       { "name": "React", "icon": "/icons/tech/react.svg" },
@@ -82,7 +82,7 @@
   },
   {
     "title": "The Simpsons Backend",
-    "desc": "API REST desarrollada con Node.js, Express y MySQL para gestionar frases de Los Simpsons, incluyendo personaje, episodio y temporada. Documentada en Postman y con modelo de base de datos diseñado en MySQL Workbench. Proyecto orientado a backend real para consumo desde aplicaciones frontend.",
+    "desc": "API REST desarrollada  para gestionar frases de Los Simpsons, incluyendo personaje, episodio y temporada. Documentada en Postman y con modelo de base de datos diseñado en MySQL Workbench. Proyecto orientado a backend real para consumo desde aplicaciones frontend.",
     "image": "/icons/projects/simpsons.png",
     "techIcons": [
       { "name": "React", "icon": "/icons/tech/react.svg" },

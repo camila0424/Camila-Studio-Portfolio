@@ -1,12 +1,19 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
+import type { Variants } from "framer-motion";
 import ProjectCard from "../../components/ProjectCard";
 import type { Project } from "../../components/ProjectCard";
 import projectsData from "../../data/projects.json";
 
-function ProjectCarousel() {
+// Interfaz para las variantes dinámicas de scroll-----------------------------------------------------------------
+interface ScrollProps {
+    scrollDirection: "up" | "down";
+    delay: number;
+}
 
+function ProjectCarousel() {
     const [[currentIndex, direction], setIndex] = useState([0, 0]);
+    const [scrollDir, setScrollDir] = useState<"up" | "down">("down");
     const length = projectsData.length;
 
     const paginate = (newDirection: number) => {
@@ -17,8 +24,52 @@ function ProjectCarousel() {
     const prevIndex = (currentIndex - 1 + length) % length;
     const nextIndex = (currentIndex + 1) % length;
 
+    // --- Lógica de Scroll y Visibilidad ------------------------------------
+    const controls = useAnimation();
+    const containerRef = useRef<HTMLDivElement>(null);
+    const lastScrollY = useRef(0);
+    const isInView = useInView(containerRef, { margin: "-100px 0px", once: false });
 
-    const centerVariants = {
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            setScrollDir(currentScrollY > lastScrollY.current ? "down" : "up");
+            lastScrollY.current = currentScrollY;
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible");
+        } else {
+            controls.start("hidden");
+        }
+    }, [isInView, controls]);
+
+    // --- VARIANTES CORREGIDAS --------------------------------------------------------------
+
+    // 1. Variantes de entrada (Vertical por Scroll)
+    const scrollEntryVariants: Variants = {
+        hidden: ({ scrollDirection }: ScrollProps) => ({
+            y: scrollDirection === "down" ? 120 : -120,
+            opacity: 0,
+        }),
+        visible: ({ delay }: ScrollProps) => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.8,
+                delay: delay,
+                ease: [0.22, 1, 0.36, 1],
+            },
+        }),
+    };
+
+    // 2. Variantes del Carrusel Central (Horizontal)
+
+    const centerSlideVariants: Variants = {
         enter: (dir: number) => ({
             x: dir > 0 ? 400 : -400,
             opacity: 0,
@@ -42,8 +93,8 @@ function ProjectCarousel() {
         }),
     };
 
-    // Variantes para los cards LATERALES (fade suave, sin slide)
-    const sideVariants = {
+    // 3. Variantes de los Cards Laterales
+    const sideSlideVariants: Variants = {
         enter: { opacity: 0, scale: 0.6 },
         center: {
             opacity: 0.4,
@@ -54,8 +105,8 @@ function ProjectCarousel() {
     };
 
     return (
-        <div className="flex flex-col items-center w-full px-4">
-            <div className="relative flex items-center justify-center w-full max-w-7xl min-h-80 md:min-h-100">
+        <div ref={containerRef} className="flex flex-col items-center w-full px-4 overflow-hidden">
+            <div className="relative flex items-center justify-center w-full max-w-7xl min-h-80 md:min-h-80">
 
                 {/* Botón Izquierdo */}
                 <button
@@ -65,61 +116,89 @@ function ProjectCarousel() {
                     ‹
                 </button>
 
-
                 <div className="flex items-center justify-center gap-4 md:gap-12 lg:gap-20 w-full">
 
-                    {/* Card IZQUIERDO — AnimatePresence independiente */}
-                    <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                        <motion.div
-                            key={`prev-${prevIndex}`}
-                            variants={sideVariants}
-                            custom={direction}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            onClick={() => paginate(-1)}
-                            className="cursor-pointer filter blur-[1px] hidden sm:block shrink-0"
-                        >
-                            <ProjectCard project={projectsData[prevIndex] as Project} isActive={false} />
-                        </motion.div>
-                    </AnimatePresence>
+                    {/* CARD IZQUIERDO */}
+                    <motion.div
+                        custom={{ scrollDirection: scrollDir, delay: 0.2 }}
+                        variants={scrollEntryVariants}
+                        initial="hidden"
+                        animate={controls}
+                        className="hidden sm:block shrink-0 "
+                    >
+                        <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                            <motion.div
+                                key={`prev-${prevIndex}`}
+                                variants={sideSlideVariants}
+                                custom={direction}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                onClick={() => paginate(-1)}
+                                className="cursor-pointer filter blur-[1px]"
+                            >
+                                <ProjectCard project={projectsData[prevIndex] as Project} isActive={false} />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
 
-                    {/* Card CENTRAL — AnimatePresence independiente con slide horizontal */}
-                    <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                        <motion.div
-                            key={`center-${currentIndex}`}
-                            variants={centerVariants}
-                            custom={direction}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            drag="x"
-                            dragConstraints={{ left: 0, right: 0 }}
-                            onDragEnd={(_, info) => {
-                                if (info.offset.x > 50) paginate(-1);
-                                else if (info.offset.x < -50) paginate(1);
-                            }}
-                            className="z-30 drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] shrink-0"
-                        >
-                            <ProjectCard project={projectsData[currentIndex] as Project} isActive={true} />
-                        </motion.div>
-                    </AnimatePresence>
 
-                    {/* Card DERECHO — AnimatePresence independiente */}
-                    <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                        <motion.div
-                            key={`next-${nextIndex}`}
-                            variants={sideVariants}
-                            custom={direction}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            onClick={() => paginate(1)}
-                            className="cursor-pointer filter blur-[1px] hidden sm:block shrink-0"
-                        >
-                            <ProjectCard project={projectsData[nextIndex] as Project} isActive={false} />
-                        </motion.div>
-                    </AnimatePresence>
+
+                    {/* CARD CENTRAL */}
+                    <motion.div
+                        custom={{ scrollDirection: scrollDir, delay: 0 }}
+                        variants={scrollEntryVariants}
+                        initial="hidden"
+                        animate={controls}
+                        className="z-30 shrink-0"
+                    >
+                        <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                            <motion.div
+                                key={`center-${currentIndex}`}
+                                variants={centerSlideVariants}
+                                custom={direction}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                drag="x"
+                                dragConstraints={{ left: 0, right: 0 }}
+                                onDragEnd={(_, info) => {
+                                    if (info.offset.x > 50) paginate(-1);
+                                    else if (info.offset.x < -50) paginate(1);
+                                }}
+                                className="cursor-default"
+                            >
+                                <ProjectCard project={projectsData[currentIndex] as Project} isActive={true} />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+
+
+
+                    {/* CARD DERECHO */}
+                    <motion.div
+                        custom={{ scrollDirection: scrollDir, delay: 0.4 }}
+                        variants={scrollEntryVariants}
+                        initial="hidden"
+                        animate={controls}
+                        className="hidden sm:block shrink-0"
+                    >
+                        <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                            <motion.div
+                                key={`next-${nextIndex}`}
+                                variants={sideSlideVariants}
+                                custom={direction}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                onClick={() => paginate(1)}
+                                className="cursor-pointer filter blur-[1px]"
+                            >
+                                <ProjectCard project={projectsData[nextIndex] as Project} isActive={false} />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+
                 </div>
 
                 {/* Botón Derecho */}
@@ -131,7 +210,7 @@ function ProjectCarousel() {
                 </button>
             </div>
 
-            {/* Dots indicadores */}
+            {/* BARRA DE CONTEO */}
             <div className="flex gap-3 mt-10">
                 {projectsData.map((_, i) => (
                     <button
