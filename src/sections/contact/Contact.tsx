@@ -32,9 +32,9 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="relative py-32 px-6 bg-linear-to-b from-blue-950 via-blue-900 to-blue-950"
+            className="relative py-6 px-4 bg-linear-to-b from-blue-950 via-blue-900 to-blue-950"
         >
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
                 {/* Columna izquierda */}
                 <ContactInfo />
