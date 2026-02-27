@@ -9,108 +9,116 @@ function Hero() {
     const ref = useRef<HTMLDivElement | null>(null);
     const isInView = useInView(ref, { margin: "-80px 0px", once: false });
 
+    // ───── MOBILE IMAGE CONTROL ─────
+    const imageRef = useRef<HTMLDivElement | null>(null);
+    const imageInView = useInView(imageRef, {
+        margin: "0px 0px -120px 0px",
+        once: false,
+    });
+    const imageControls = useAnimation();
+
     useEffect(() => {
         if (isInView) controls.start("visible");
         else controls.start("hidden");
     }, [isInView, controls]);
 
-    const imageVariants: Variants = {
+
+    useEffect(() => {
+        if (imageInView) {
+            imageControls.start("visible");
+        } else {
+            imageControls.start("hidden");
+        }
+    }, [imageInView, imageControls]);
+
+    // ───── VARIANTS ─────
+
+    const fadeInUpVariants: Variants = {
         hidden: {
-            scale: 0,
             opacity: 0,
-            transition: { type: "spring", stiffness: 80, damping: 18, duration: 0.9 },
+            y: 120,
+            scale: 0.9,
+            filter: "blur(10px)",
         },
         visible: {
-            scale: 1,
             opacity: 1,
-            transition: { type: "spring", stiffness: 70, damping: 14, duration: 1.1 },
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            transition: {
+                duration: 1.2,
+                ease: [0.16, 1, 0.3, 1],
+            },
         },
     };
 
     const textVariants: Variants = {
-        hidden: {
-            opacity: 0,
-            x: -60,
-            transition: { duration: 0.7, ease: "easeIn" },
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1.1, ease: "easeOut", delay: 0.2 },
-        },
-    };
-
-    const badgeVariants: Variants = {
-        hidden: { opacity: 0, y: -12 },
+        hidden: { opacity: 0, y: 40 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.9, ease: "easeOut", delay: 0.4 },
+            transition: {
+                duration: 0.9,
+                ease: [0.16, 1, 0.3, 1],
+            },
         },
     };
 
     const chipsContainer: Variants = {
         hidden: {},
-        visible: { transition: { staggerChildren: 0.12, delayChildren: 0.6 } },
-    };
-    const chipItem: Variants = {
-        hidden: { opacity: 0, scale: 0.7 },
         visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { type: "spring", stiffness: 200, damping: 16 },
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.4,
+            },
         },
     };
 
-    const chips = ["React", "TypeScript", "Tailwind CSS", "Node.js", "IA integrada"];
+    const chipItem: Variants = {
+        hidden: { opacity: 0, scale: 0.8, y: 10 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: { duration: 0.4 },
+        },
+    };
+
+    const chips = ["React", "TypeScript", "Tailwind CSS", "Node.js", "IA Integrada"];
 
     return (
         <section
             id="hero"
-            className="relative w-full min-h-screen flex items-center overflow-hidden scroll-mt-20"
+            className="relative w-full min-h-screen flex items-center overflow-hidden scroll-mt-20 bg-white"
         >
-            {/* Video Background */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-            >
-                <source src="/videos/DegradeHorizontal.mp4" type="video/mp4" />
-            </video>
-
+            {/* Overlay fondo elegante */}
             <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" />
-            <div className="absolute bottom-0 left-0 w-full h-40 bg-linear-to-b from-transparent to-white" />
+            <div className="absolute bottom-0 left-0 w-full h-40 bg-linear-to-t from-white to-transparent" />
 
-            {/* Contenido */}
             <div
                 ref={ref}
                 className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between
-                           px-5 sm:px-8 md:px-12 w-full gap-8 md:gap-6
-                           pt-28 pb-16 md:pt-28 md:pb-16"
+                           px-5 sm:px-8 md:px-12 w-full gap-8 md:gap-12
+                           pt-28 pb-16 md:pt-26 md:pb-18"
             >
-                {/* ── COLUMNA IZQUIERDA ── */}
+                {/* ───── TEXTO ───── */}
                 <motion.div
-                    className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4"
+                    className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-5"
                     variants={textVariants}
                     initial="hidden"
                     animate={controls}
                 >
-                    <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-950 leading-snug">
-                        Webs que{" "}
-                        <span className="text-blue-700">enamoran</span> a tus clientes
-                        <br className="hidden sm:block" />
-                        {" "}y trabajan con{" "}
-                        <span className="text-blue-700">IA</span>.
+                    <h1 className="text-4xl sm:text-4xl lg:text-5xl font-black text-blue-950 leading-tight tracking-tight">
+                        Interfaces de <span className="text-blue-700">alto impacto</span> <br />
+                        potenciadas con <span className="text-blue-700">IA</span>.
                     </h1>
 
-                    <p className="text-sm sm:text-base text-blue-900/70 max-w-md leading-relaxed">
-                        Diseño digital de vanguardia y <strong>automatización con IA.</strong> Creo herramientas inteligentes que escalan tu negocio mientras tú te enfocas en lo importante.
+                    <p className="text-base sm:text-lg text-blue-900/75 max-w-md leading-relaxed">
+                        Transformo visiones en productos digitales escalables, combinando alto rendimiento y <strong>automatización inteligente</strong> para maximizar resultados.
                     </p>
 
                     <motion.div
-                        className="flex flex-wrap justify-center md:justify-start gap-2 my-5"
+                        className="flex flex-wrap justify-center md:justify-start gap-2 my-2"
                         variants={chipsContainer}
                         initial="hidden"
                         animate={controls}
@@ -119,49 +127,57 @@ function Hero() {
                             <motion.span
                                 key={chip}
                                 variants={chipItem}
-                                className="bg-blue-100 text-blue-800 font-medium text-xs px-3 py-1.5 rounded-full border border-blue-200 shadow-sm"
+                                className="bg-blue-50 text-blue-700 font-semibold text-xs px-3 py-1.5 rounded-full border border-blue-100 shadow-sm"
                             >
                                 {chip}
                             </motion.span>
                         ))}
                     </motion.div>
 
-                    <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto mt-1">
-                        <ScrollButton
-                            targetId="projects"
-                            label="▶ Ver mis proyectos"
-                        />
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
+                        <ScrollButton targetId="projects" label="▶ Explorar Proyectos" />
                         <a
                             href="#contact"
-                            className="border-2 border-blue-900 text-blue-900 font-bold px-6 py-3 rounded-xl hover:bg-blue-900 hover:text-white active:scale-95 transition-all duration-200 text-sm sm:text-base text-center w-full sm:w-auto"
+                            className="border-2 border-blue-900 text-blue-900 font-bold px-8 py-3 rounded-xl 
+                                       hover:bg-blue-900 hover:text-white active:scale-95 transition-all duration-300 
+                                       text-sm sm:text-base text-center w-full sm:w-auto"
                         >
                             Hablemos
                         </a>
                     </div>
+
+                    {/* ───── MOBILE IMAGE ───── */}
+                    <div ref={imageRef} className="w-full flex justify-center mt-12 md:hidden">
+                        <motion.div
+                            className="relative w-64 sm:w-80"
+                            variants={fadeInUpVariants}
+                            initial="hidden"
+                            animate={imageControls}
+                        >
+                            <div className="absolute -inset-3 rounded-4xl bg-linear-to-br from-blue-300 to-blue-900 opacity-40 blur-md" />
+                            <img
+                                src={CamilaOriginal}
+                                alt="Camila Bedoya"
+                                className="relative rounded-4xl shadow-2xl w-full h-auto object-cover"
+                            />
+                        </motion.div>
+                    </div>
                 </motion.div>
 
-                {/* ── COLUMNA DERECHA ── */}
+                {/* ───── DESKTOP IMAGE ───── */}
                 <motion.div
-                    className="flex-1 flex justify-center md:justify-end"
-                    variants={imageVariants}
+                    className="hidden md:flex flex-1 justify-end"
+                    variants={fadeInUpVariants}
                     initial="hidden"
                     animate={controls}
                 >
-                    <div className="relative w-56 sm:w-72 md:w-80 lg:w-96">
-                        <div className="absolute -inset-2 rounded-3xl bg-linear-to-br from-blue-400 via-blue-800 to-blue-900 opacity-50 blur-sm" />
+                    <div className="relative lg:w-100">
+                        <div className="absolute -inset-4 rounded-4xl bg-linear-to-tr from-blue-400/20 to-blue-800/10 opacity-30 blur-2xl" />
                         <img
                             src={CamilaOriginal}
-                            alt="Camila Bedoya desarrolladora web"
-                            className="relative rounded-3xl shadow-2xl w-full h-auto object-cover md:mt-8 transition-transform duration-300 hover:scale-105"
+                            alt="Camila Bedoya"
+                            className="relative rounded-4xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
                         />
-                        <motion.span
-                            variants={badgeVariants}
-                            initial="hidden"
-                            animate={controls}
-                            className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap tracking-wide"
-                        >
-                            ✦ Disponible para proyectos
-                        </motion.span>
                     </div>
                 </motion.div>
             </div>

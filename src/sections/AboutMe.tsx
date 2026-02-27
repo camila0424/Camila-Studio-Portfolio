@@ -42,7 +42,7 @@ const AboutMe = () => {
         },
     };
 
-    // Texto: desliza desde la derecha, más lento con delay
+    // Texto: desliza desde la derecha, más lento con delay al entrar; se desliza hacia la derecha al salir
     const textVariants: Variants = {
         hidden: {
             opacity: 0,
@@ -56,15 +56,7 @@ const AboutMe = () => {
         },
     };
 
-    // Badge animado
-    const badgeVariants: Variants = {
-        hidden: { opacity: 0, y: -12 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.9, ease: "easeOut", delay: 0.5 },
-        },
-    };
+
 
 
     return (
@@ -72,8 +64,8 @@ const AboutMe = () => {
             ref={ref}
             id="about-me"
             className="relative w-full flex items-center justify-center overflow-hidden
-                       py-20 px-4
-                       sm:py-24 sm:px-6
+                       py-10 px-4
+                       sm:py-20 sm:px-6
                        md:px-10
                        min-h-screen"
         >
@@ -119,18 +111,7 @@ const AboutMe = () => {
                                        lg:w-80 lg:h-80
                                        object-cover rounded-2xl shadow-2xl"
                         />
-                        {/* Badge disponible */}
-                        <motion.span
-                            variants={badgeVariants}
-                            initial="hidden"
-                            animate={controls}
-                            className="absolute -bottom-3 left-1/2 -translate-x-1/2
-                                       bg-green-500 text-white text-xs font-bold
-                                       px-4 py-1.5 rounded-full shadow-lg
-                                       whitespace-nowrap tracking-wide"
-                        >
-                            ✦ Disponible para proyectos
-                        </motion.span>
+
                     </div>
                 </motion.div>
 

@@ -32,7 +32,7 @@ function Header() {
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 h-16 mb-4">
+            <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm border-b border-gray-100 h-16 mb-4">
                 <nav className="max-w-7xl mx-auto flex items-center justify-between h-full px-6 md:px-10">
                     {/* Logo */}
                     <div
