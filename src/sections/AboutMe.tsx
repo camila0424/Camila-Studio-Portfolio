@@ -10,7 +10,7 @@ const AboutMe = () => {
     const controls = useAnimation();
     const ref = useRef<HTMLDivElement | null>(null);
 
-    // once: false → se dispara cada vez que entra/sale del viewport
+
     const isInView = useInView(ref, { margin: "-80px 0px", once: false });
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const AboutMe = () => {
         else controls.start("hidden");
     }, [isInView, controls]);
 
-    // Avatar: pequeño→grande al entrar, grande→pequeño al salir
+
     const avatarVariants: Variants = {
         hidden: {
             scale: 0,
@@ -42,7 +42,7 @@ const AboutMe = () => {
         },
     };
 
-    // Texto: desliza desde la derecha, más lento con delay al entrar; se desliza hacia la derecha al salir
+
     const textVariants: Variants = {
         hidden: {
             opacity: 0,
