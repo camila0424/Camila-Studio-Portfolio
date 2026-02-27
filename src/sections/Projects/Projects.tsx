@@ -50,21 +50,21 @@ function Projects() {
         >
             {/* FONDO CON DEGRADADO DIFUMINADO */}
             <div className="absolute inset-0 z-0">
-                {/* Capa base blanca */}
-                <div className="absolute inset-0 bg-white" />
+                {/* Capa base blanca más suave */}
+                <div className="absolute inset-0 bg-white " />
 
-                {/* Capa de degradado azul con difuminado (radial + linear) */}
+                {/* Capa de degradado azul  con difuminado */}
                 <div
-                    className="absolute inset-0 opacity-40 md:opacity-60"
+                    className="absolute inset-0 opacity-70 md:opacity-90"
                     style={{
                         background: `linear-gradient(to bottom, 
-                            rgba(255, 255, 255, 1) 0%, 
-                            rgba(219, 234, 254, 0.5) 40%, 
-                            rgba(30, 58, 138, 0.8) 100%)`
+        rgba(255, 255, 255, 0.5) 0%, 
+        rgba(191, 219, 254, 0.6) 40%, 
+        rgba(59, 130, 246, 0.9) 100%)`,
                     }}
                 />
-                {/* Efecto de orbe difuminado inferior para suavizar el final */}
-                <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[150%] h-[50%] bg-blue-900/20 blur-[120px] rounded-[100%]" />
+
+
             </div>
 
             <div className="relative z-20 w-full flex flex-col items-center px-4">
