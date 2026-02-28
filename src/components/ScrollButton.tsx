@@ -10,7 +10,7 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({ targetId, label }) => {
     const section = document.getElementById(targetId);
 
     if (section) {
-      const yOffset = -80; // Ajusta según altura de tu header fixed
+      const yOffset = -80; // Ajusta según altura del header fixed
       const y =
         section.getBoundingClientRect().top +
         window.pageYOffset +
