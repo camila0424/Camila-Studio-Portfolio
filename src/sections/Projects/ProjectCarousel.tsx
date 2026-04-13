@@ -166,7 +166,7 @@ function ProjectCarousel() {
                                     if (info.offset.x > 50) paginate(-1);
                                     else if (info.offset.x < -50) paginate(1);
                                 }}
-                                className="cursor-default"
+                                className="cursor-default group"
                             >
                                 <ProjectCard project={projectsData[currentIndex] as Project} isActive={true} />
                             </motion.div>

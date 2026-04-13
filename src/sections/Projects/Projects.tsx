@@ -5,6 +5,7 @@ import ProjectCarousel from "./ProjectCarousel";
 function Projects() {
     const title = "Mis Proyectos";
     const controls = useAnimation();
+    const subtitleControls = useAnimation();
     const ref = useRef(null);
 
     const isInView = useInView(ref, {
@@ -14,10 +15,12 @@ function Projects() {
     useEffect(() => {
         if (isInView) {
             controls.start("visible");
+            subtitleControls.start("visible");
         } else {
             controls.start("hidden");
+            subtitleControls.start("hidden");
         }
-    }, [isInView, controls]);
+    }, [isInView, controls, subtitleControls]);
 
     const containerVariants = {
         hidden: {},
@@ -42,6 +45,15 @@ function Projects() {
         },
     };
 
+    const subtitleVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, delay: 0.4 },
+        },
+    };
+
     return (
         <section
             ref={ref}
@@ -50,10 +62,7 @@ function Projects() {
         >
             {/* FONDO CON DEGRADADO DIFUMINADO */}
             <div className="absolute inset-0 z-0">
-                {/* Capa base blanca más suave */}
-                <div className="absolute inset-0 bg-white " />
-
-                {/* Capa de degradado azul  con difuminado */}
+                <div className="absolute inset-0 bg-white" />
                 <div
                     className="absolute inset-0 opacity-70 md:opacity-90"
                     style={{
@@ -63,17 +72,15 @@ function Projects() {
         rgba(59, 130, 246, 0.9) 100%)`,
                     }}
                 />
-
-
             </div>
 
             <div className="relative z-20 w-full flex flex-col items-center px-4">
-                {/* TÍTULO RESPONSIVE */}
+                {/* TÍTULO */}
                 <motion.h2
                     variants={containerVariants}
                     initial="hidden"
                     animate={controls}
-                    className="flex flex-wrap justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-8 md:mb-12"
+                    className="flex flex-wrap justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-3 md:mb-4"
                 >
                     {title.split("").map((char, index) => (
                         <motion.span
@@ -85,6 +92,16 @@ function Projects() {
                         </motion.span>
                     ))}
                 </motion.h2>
+
+                {/* SUBTÍTULO */}
+                <motion.p
+                    initial="hidden"
+                    animate={subtitleControls}
+                    variants={subtitleVariants}
+                    className="text-sm sm:text-base text-blue-800/70 mb-8 md:mb-12 tracking-wide"
+                >
+                    Pincha encima de cada proyecto para ver más información
+                </motion.p>
 
                 {/* CONTENEDOR DEL CARRUSEL */}
                 <div className="w-full max-w-full flex justify-center">
