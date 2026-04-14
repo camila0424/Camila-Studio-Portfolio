@@ -10,13 +10,13 @@ const Skills = () => {
     return (
         <section id="skills" className="relative py-32 px-6 bg-linear-to-b from-blue-950 via-blue-900 to-blue-950">
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-3 text-white">Skills</h2>
-                <p className="text-sm text-white/60 mb-16 tracking-wide">
+                <h2 className="text-5xl font-bold mb-6 text-white">Skills</h2>
+                <p className="text-lg text-white/60 mb-16 tracking-wide">
                     Pincha encima de cada categoría para ver las tecnologías
                 </p>
 
                 {/* Grid de categorías */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {skillCategories.map((category) => (
                         <motion.button
                             key={category.title}
