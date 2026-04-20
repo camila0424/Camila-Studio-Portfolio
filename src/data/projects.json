@@ -1,5 +1,18 @@
 [
   {
+    "title": "Fiestas de Álava 2026 — Sitio web oficial de San Prudencio",
+    "desc": "Desarrollo frontend completo de una página web dedicada a las Fiestas de San Prudencio y Nuestra Señora de Estíbaliz 2026, celebración patronal del Territorio Histórico de Álava. El proyecto fue construido integramente con HTML5, CSS3 y JavaScript vanilla, sin frameworks ni librerías externas. El diseño visual toma como referencia el cartel oficial de las fiestas, traduciendo su estética risograph —colores vivos, bordes negros y sombras desplazadas— en una interfaz web alegre, espontánea y completamente responsiva. Entre sus funcionalidades destacan: un contador regresivo en tiempo real, un sistema de búsqueda con debounce y resaltado de texto, filtros combinados por categoría y día, carrusel de tradiciones con animaciones de hover, galería multimedia con lightbox que integra vídeos de YouTube, modal interactivo con ubicación de cada evento enlazado a Google Maps, y animaciones de entrada y salida al hacer scroll mediante IntersectionObserver. El sitio está desplegado en Vercel",
+    "image": "/icons/projects/san-prudencio.png",
+    "techIcons": [
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
+      { "name": "HTML", "icon": "/icons/tech/html5.svg" },
+      { "name": "CSS", "icon": "/icons/tech/css.svg" }
+    ],
+    "github": "https://github.com/camila0424/fiestas_de_alava.git",
+    "demo": "https://fiesta-san-prudecio.vercel.app/"
+  },
+  {
     "title": "IBL SA – International Business Logistic S.A.",
     "desc": "Web corporativa de IBLSA, empresa de transporte internacional en Panamá, desarrollada con apoyo de IA. Incluye diseño de prototipos en Figma y despliegue en Hostinger, con enfoque en diseño responsive y experiencia de usuario, gestionando todo el proceso desde la conceptualización hasta su publicación en producción.",
     "image": "/icons/projects/iblsa.png",
