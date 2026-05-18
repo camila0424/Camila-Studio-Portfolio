@@ -1,5 +1,21 @@
 [
   {
+    "title": "ICT Devocional",
+    "desc": "PWA mobile-first de crecimiento espiritual gamificada para la iglesia ICT Vitoria-Gasteiz. Incluye plan de lectura bíblica diaria, modelo devocional de 8 secciones, sistema de rachas, progreso mensual visual, push notifications y sistema de autenticación completo. Instalable en Android, iOS y escritorio sin pasar por ninguna tienda de apps.",
+    "image": "/icons/projects/ict-devocional.png",
+    "techIcons": [
+      { "name": "Next.js", "icon": "/icons/tech/nextjs_icon_dark.svg" },
+      { "name": "TypeScript", "icon": "/icons/tech/typescript.svg" },
+      { "name": "Tailwind CSS", "icon": "/icons/tech/tailwindcss.svg" },
+      { "name": "Prisma", "icon": "/icons/tech/prisma.svg" },
+      { "name": "PostgreSQL", "icon": "/icons/tech/postgresql.svg" },
+      { "name": "Neon", "icon": "/icons/tech/neon.svg" },
+      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
+    ],
+    "github": "https://github.com/camila0424/ict.devocional.git",
+    "demo": "https://ict-devocional.vercel.app/"
+  },
+  {
     "title": "Fiestas de Álava 2026 — Sitio web oficial de San Prudencio",
     "desc": "Desarrollo frontend completo de una página web dedicada a las Fiestas de San Prudencio y Nuestra Señora de Estíbaliz 2026, celebración patronal del Territorio Histórico de Álava. El proyecto fue construido integramente con HTML5, CSS3 y JavaScript vanilla, sin frameworks ni librerías externas. El diseño visual toma como referencia el cartel oficial de las fiestas, traduciendo su estética risograph —colores vivos, bordes negros y sombras desplazadas— en una interfaz web alegre, espontánea y completamente responsiva. Entre sus funcionalidades destacan: un contador regresivo en tiempo real, un sistema de búsqueda con debounce y resaltado de texto, filtros combinados por categoría y día, carrusel de tradiciones con animaciones de hover, galería multimedia con lightbox que integra vídeos de YouTube, modal interactivo con ubicación de cada evento enlazado a Google Maps, y animaciones de entrada y salida al hacer scroll mediante IntersectionObserver. El sitio está desplegado en Vercel",
     "image": "/icons/projects/san-prudencio.png",
@@ -40,6 +56,31 @@
     "demo": "https://juega-piedra-papel-o-tijera.vercel.app/"
   },
   {
+    "title": "Generador de Contraseñas Seguras",
+    "desc": "Formulario interactivo que genera contraseñas seguras con opciones de longitud y tipos de caracteres (mayúsculas, minúsculas, números y símbolos). Incluye validaciones, indicador de fuerza, botón para copiar al portapapeles, ojito para mostrar u ocultar la contraseña y tests unitarios con Vitest.",
+    "image": "/icons/projects/generador-contrasenas.png",
+    "techIcons": [
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
+      { "name": "HTML5", "icon": "/icons/tech/html5.svg" },
+      { "name": "CSS3", "icon": "/icons/tech/css3.svg" },
+      { "name": "Vitest", "icon": "/icons/tech/vitest.svg" }
+    ],
+    "github": "https://github.com/camila0424/prueba-tecnica-dominion-",
+    "demo": "https://generador-de-clave-segura.vercel.app/"
+  },
+  {
+    "title": "Calculadora Científica",
+    "desc": "Calculadora con operaciones básicas (suma, resta, multiplicación, división) y avanzadas (raíz cuadrada, potencia, seno, coseno, tangente). Incluye validaciones, manejo de errores, historial de operaciones y diseño modular con separación de lógica y presentación.",
+    "image": "/icons/projects/calculadora-cientifica.png",
+    "techIcons": [
+      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
+      { "name": "HTML5", "icon": "/icons/tech/html5.svg" },
+      { "name": "CSS3", "icon": "/icons/tech/css3.svg" }
+    ],
+    "github": "https://github.com/camila0424/prueba-tecnica-dominion-",
+    "demo": "https://calculadora-cientifica-cb.vercel.app/"
+  },
+  {
     "title": "Mila Music",
     "desc": "Plataforma web en desarrollo para conectar estudiantes con docentes de música alrededor del mundo.",
     "image": "/icons/projects/mila.png",
@@ -66,33 +107,7 @@
     "github": "https://github.com/camila0424/meal-app-react-native.git",
     "demo": null
   },
-  {
-    "title": "Listado de usuarios",
-    "desc": "Listado de usuarios es una aplicación web interactiva que permite gestionar usuarios con funcionalidades avanzadas como búsqueda, filtrado y marcado de favoritos. La aplicación incluye persistencia de datos y capacidad para agregar nuevos usuarios. El proyecto está construido con React y estilos en SCSS, pensado para ofrecer una experiencia de usuario fluida y responsiva en dispositivos móviles y escritorio.",
-    "image": "/icons/projects/listado.png",
-    "techIcons": [
-      { "name": "React", "icon": "/icons/tech/react.svg" },
-      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
-      { "name": "Css", "icon": "/icons/tech/css.svg" },
-      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" }
-    ],
-    "github": "https://github.com/camila0424/listado_de_contactos.git",
-    "demo": "https://camila0424.github.io/listado_de_contactos/"
-  },
-  {
-    "title": "Harry Potter Finder",
-    "desc": "Es un buscador básico para encontrar los diferentes personajes de la saga de películas Harry Potter, filtrarlos usando el respectivo nombre y también seleccionando la casa a la que pertenece cada uno de ellos. En este buscador se puede ver la tarjeta descriptiva, seleccionando la imagen o el recuadro en el que se encuentra el actor.",
-    "image": "/icons/projects/harry.png",
-    "techIcons": [
-      { "name": "React", "icon": "/icons/tech/react.svg" },
-      { "name": "NodeJs", "icon": "/icons/tech/nodejs.svg" },
-      { "name": "ExpressJs", "icon": "/icons/tech/express.svg" },
-      { "name": "Html", "icon": "/icons/tech/html5.svg" },
-      { "name": "Css", "icon": "/icons/tech/css.svg" }
-    ],
-    "github": "https://github.com/camila0424/harry-potter-actors.git",
-    "demo": "http://beta.adalab.es/modulo-3-evaluacion-final-camila0424/"
-  },
+
   {
     "title": "The Simpsons Backend",
     "desc": "API REST desarrollada  para gestionar frases de Los Simpsons, incluyendo personaje, episodio y temporada. Documentada en Postman y con modelo de base de datos diseñado en MySQL Workbench. Proyecto orientado a backend real para consumo desde aplicaciones frontend.",
@@ -106,19 +121,5 @@
     ],
     "github": "https://github.com/camila0424/the-simpsons-backend.git",
     "demo": null
-  },
-  {
-    "title": "Adacurri (Proyecto grupal)",
-    "desc": "Aplicación web colaborativa que permite crear y compartir una tarjeta con información de curriculum vitae. Desarrollada en equipo utilizando HTML, Sass, JavaScript y Vite. Incluye diseño personalizado en Photoshop y despliegue en GitHub Pages. Refuerza habilidades de trabajo en equipo y control de versiones.",
-    "image": "/icons/projects/adacurri.png",
-    "techIcons": [
-      { "name": "Html", "icon": "/icons/tech/html5.svg" },
-      { "name": "Sass", "icon": "/icons/tech/sass.svg" },
-      { "name": "Vite", "icon": "/icons/tech/vitejs.svg" },
-      { "name": "JavaScript", "icon": "/icons/tech/javascript.svg" },
-      { "name": "PhotoShop", "icon": "/icons/tech/photoshop.svg" }
-    ],
-    "github": "https://github.com/camila0424/create-your-cv-card-.git",
-    "demo": "https://camila0424.github.io/create-your-cv-card-/index.html"
   }
 ]

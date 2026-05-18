@@ -19,10 +19,14 @@ export const skillCategories: SkillCategory[] = [
       { name: "React Native", desc: "Framework para crear aplicaciones móviles nativas con React" },
       { name: "Expo", desc: "Conjunto de herramientas para acelerar el desarrollo con React Native" },
       { name: "JavaScript", desc: "Lenguaje base para desarrollo web dinámico y scripts" },
-      { name: "TypeScript", desc: "Superset de JavaScript que añade tipado estático para mayor seguridad" }, // <-- Aquí va TS
+      { name: "TypeScript", desc: "Superset de JavaScript que añade tipado estático para mayor seguridad" },
+      { name: "Next.js", desc: "Framework de React para aplicaciones web con renderizado del lado del servidor y generación estática" },
+      { name: "HTML", desc: "Lenguaje de marcado para estructurar el contenido de páginas web" },
       { name: "CSS", desc: "Lenguaje para estilizar páginas web con reglas CSS" },
       { name: "Sass", desc: "Preprocesador CSS que añade funcionalidades como variables y anidación" },
       { name: "TailwindCSS", desc: "Framework CSS para diseño rápido y responsivo con utilidades" },
+      { name: "Vite", desc: "Bundler y servidor de desarrollo ultrarrápido para proyectos modernos con JavaScript y TypeScript" },
+      { name: "React Router", desc: "Librería para gestionar la navegación y las rutas en aplicaciones React" },
     ],
   },
   {
@@ -30,7 +34,13 @@ export const skillCategories: SkillCategory[] = [
     color: "from-purple-400 to-indigo-500",
     tools: [
       { name: "Node.js", desc: "Entorno de ejecución para JavaScript en el servidor" },
+      { name: "Express", desc: "Framework minimalista para construir APIs REST y servidores web con Node.js" },
       { name: "MySQL", desc: "Sistema de gestión de bases de datos relacional de código abierto" },
+      { name: "PostgreSQL", desc: "Sistema de gestión de bases de datos relacional avanzado y de código abierto" },
+      { name: "Prisma", desc: "ORM moderno para Node.js y TypeScript que simplifica el acceso y gestión de bases de datos" },
+      { name: "Neon", desc: "Plataforma serverless de PostgreSQL en la nube optimizada para aplicaciones modernas" },
+      { name: "JWT", desc: "Estándar para autenticación segura mediante tokens firmados entre cliente y servidor" },
+      { name: "Google OAuth", desc: "Sistema de autenticación que permite iniciar sesión con cuenta de Google de forma segura" },
       { name: "Postman", desc: "Herramienta para testear, documentar y automatizar APIs REST" },
       { name: "Render", desc: "Plataforma de despliegue para aplicaciones web y APIs con soporte para backend" },
     ],
@@ -52,6 +62,7 @@ export const skillCategories: SkillCategory[] = [
     tools: [
       { name: "GitHub", desc: "Plataforma para control de versiones y colaboración entre desarrolladores" },
       { name: "Vercel", desc: "Plataforma para despliegue y hosting de aplicaciones web" },
+      { name: "Vitest", desc: "Framework de testing unitario para proyectos con Vite, compatible con la API de Jest" },
       { name: "Scrum", desc: "Marco de trabajo ágil para gestión de proyectos en equipo" },
       { name: "Kanban", desc: "Metodología visual para organizar tareas y flujos de trabajo" },
     ],
