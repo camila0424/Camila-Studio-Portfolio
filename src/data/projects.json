@@ -28,19 +28,7 @@
     "github": "https://github.com/camila0424/fiestas_de_alava.git",
     "demo": "https://fiesta-san-prudecio.vercel.app/"
   },
-  {
-    "title": "IBL SA – International Business Logistic S.A.",
-    "desc": "Web corporativa de IBLSA, empresa de transporte internacional en Panamá, desarrollada con apoyo de IA. Incluye diseño de prototipos en Figma y despliegue en Hostinger, con enfoque en diseño responsive y experiencia de usuario, gestionando todo el proceso desde la conceptualización hasta su publicación en producción.",
-    "image": "/icons/projects/iblsa.png",
-    "techIcons": [
-      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
-      { "name": "Hostinger", "icon": "/icons/tech/hostinger.svg" },
-      { "name": "HTML", "icon": "/icons/tech/html5.svg" },
-      { "name": "CSS", "icon": "/icons/tech/css.svg" }
-    ],
-    "github": "",
-    "demo": "https://iblsa.com/"
-  },
+
   {
     "title": "Juega Piedra-Papel-Tijera",
     "desc": "Aplicación interactiva desarrollada en React y Tailwind que permite jugar contra la computadora en tiempo real.",
@@ -121,5 +109,18 @@
     ],
     "github": "https://github.com/camila0424/the-simpsons-backend.git",
     "demo": null
+  },
+  {
+    "title": "IBL SA – International Business Logistic S.A.",
+    "desc": "Web corporativa de IBLSA, empresa de transporte internacional en Panamá, desarrollada con apoyo de IA. Incluye diseño de prototipos en Figma y despliegue en Hostinger, con enfoque en diseño responsive y experiencia de usuario, gestionando todo el proceso desde la conceptualización hasta su publicación en producción.",
+    "image": "/icons/projects/iblsa.png",
+    "techIcons": [
+      { "name": "Figma", "icon": "/icons/tech/figma.svg" },
+      { "name": "Hostinger", "icon": "/icons/tech/hostinger.svg" },
+      { "name": "HTML", "icon": "/icons/tech/html5.svg" },
+      { "name": "CSS", "icon": "/icons/tech/css.svg" }
+    ],
+    "github": "",
+    "demo": "https://iblsa.com/"
   }
 ]
