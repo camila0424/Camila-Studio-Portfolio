@@ -16,6 +16,22 @@
     "demo": "https://ict-devocional.vercel.app/"
   },
   {
+    "title": "TEKK",
+
+    "desc": "Landing de consultoría IA para PYMEs industriales del País Vasco. Dos líneas de negocio: automatización de procesos industriales y contenido IA-first. Incluye animaciones con GSAP y Three.js, splash screen animado, formulario de contacto, páginas legales, SEO completo con sitemap y robots, skeleton loading, soporte i18n y dark/light mode.",
+    "image": "/icons/projects/tekk.png",
+    "techIcons": [
+      { "name": "Next.js", "icon": "/icons/tech/nextjs_icon_dark.svg" },
+      { "name": "TypeScript", "icon": "/icons/tech/typescript.svg" },
+      { "name": "Tailwind CSS", "icon": "/icons/tech/tailwindcss.svg" },
+      { "name": "Three.js", "icon": "/icons/tech/threejs.svg" },
+      { "name": "GSAP", "icon": "/icons/tech/gsap.svg" },
+      { "name": "Vercel", "icon": "/icons/tech/vercel.svg" }
+    ],
+    "github": "https://github.com/camila0424/tekk.git",
+    "demo": "https://www.tekk.es"
+  },
+  {
     "title": "Fiestas de Álava 2026 — Sitio web oficial de San Prudencio",
     "desc": "Desarrollo frontend completo de una página web dedicada a las Fiestas de San Prudencio y Nuestra Señora de Estíbaliz 2026, celebración patronal del Territorio Histórico de Álava. El proyecto fue construido integramente con HTML5, CSS3 y JavaScript vanilla, sin frameworks ni librerías externas. El diseño visual toma como referencia el cartel oficial de las fiestas, traduciendo su estética risograph —colores vivos, bordes negros y sombras desplazadas— en una interfaz web alegre, espontánea y completamente responsiva. Entre sus funcionalidades destacan: un contador regresivo en tiempo real, un sistema de búsqueda con debounce y resaltado de texto, filtros combinados por categoría y día, carrusel de tradiciones con animaciones de hover, galería multimedia con lightbox que integra vídeos de YouTube, modal interactivo con ubicación de cada evento enlazado a Google Maps, y animaciones de entrada y salida al hacer scroll mediante IntersectionObserver. El sitio está desplegado en Vercel",
     "image": "/icons/projects/san-prudencio.png",
